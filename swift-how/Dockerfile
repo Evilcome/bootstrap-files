@@ -12,15 +12,15 @@ RUN apt-get update && \
 RUN npm install -g nodemon
 
 # Clone the swift-how project
-RUN git clone gogs@git.lyitlove.com:evilcome/swift-how.git
-RUN cd /swift-how && npm install
+RUN git clone https://github.com/Evilcome/swift-how-site.git
+RUN cd /swift-how-site && npm install
 
 # Define working directory
-WORKDIR /swift-how
+WORKDIR /swift-how-site
 # ADD . /src
 
 # Expose port
 EXPOSE  8003
 
 # Run app using nodemon
-CMD ["nodemon", "/swift-how/app.js"]
+CMD ["nodemon", "/swift-how-site/index.js"]
