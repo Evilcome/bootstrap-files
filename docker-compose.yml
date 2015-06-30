@@ -4,6 +4,8 @@ nginx:
     - nodeswifthow:nodeswifthow
   ports:
     - "80:80"
-    - "8003:8003"
+    - "443:443"
 nodeswifthow: 
   build: ./swift-how
+  ports:
+    - "8003:8003"
