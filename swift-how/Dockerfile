@@ -13,7 +13,9 @@ RUN npm install -g nodemon
 
 # Clone the swift-how project
 RUN git clone https://github.com/Evilcome/swift-how-site.git
-RUN cd /swift-how-site && npm install
+RUN cd /swift-how-site
+RUN git pull
+RUN npm install
 
 # Define working directory
 WORKDIR /swift-how-site
