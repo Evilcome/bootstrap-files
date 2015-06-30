@@ -1,0 +1,8 @@
+nginx:
+	build: ./nginx
+	links:
+		- node_swift_how:node_swift_how
+	ports:
+		- "80:80"
+node_swift_how: 
+	build: ./swift_how
