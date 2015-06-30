@@ -1,11 +1,13 @@
 nginx:
-  build: ./nginx
-  links:
-    - nodeswifthow:nodeswifthow
+  image: jwilder/nginx-proxy
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock
   ports:
     - "80:80"
-    - "443:443"
 nodeswifthow: 
   build: ./swift-how
+  environment:
+    - VIRTUAL_HOST=swift.how
+    - VIRTUAL_PORT=8003
   ports:
     - "8003:8003"
