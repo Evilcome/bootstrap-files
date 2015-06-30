@@ -6,3 +6,5 @@ nginx:
     - "80:80"
 nodeswifthow: 
   build: ./swift-how
+  ports: 
+    - "8003:8003"
