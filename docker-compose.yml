@@ -7,7 +7,7 @@ nginx:
 nodeswifthow: 
   build: ./swift-how
   environment:
-    - VIRTUAL_HOST=swift.how
+    - VIRTUAL_HOST=swift.how evilcome.com blog.swift.how
     - VIRTUAL_PORT=8003
   ports:
     - "8003:8003"
