@@ -13,7 +13,7 @@ A docker-compose example of personal sites.
 	chmod +x /usr/local/bin/docker-compose
 	```
 
-## Deployment
+## Deploy
 ```sh
 git clone https://github.com/Evilcome/bootstrap-files.git
 cd bootstrap-files
