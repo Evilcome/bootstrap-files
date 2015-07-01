@@ -16,10 +16,6 @@ A docker-compose example of personal sites.
 ## Deployment
 ```sh
 git clone https://github.com/Evilcome/bootstrap-files.git
-```
-```sh
 cd bootstrap-files
-```
-```sh
 docker-compose up
 ```
