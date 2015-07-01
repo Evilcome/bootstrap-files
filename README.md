@@ -1,6 +1,6 @@
 # bootstrap-files
 
-A docker-compose file of personal sites.
+A docker-compose example of personal sites.
 
 ## Prepare
 
@@ -8,13 +8,19 @@ A docker-compose file of personal sites.
 - install git
 - install docker compose
 
-	`
-		curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-		chmod +x /usr/local/bin/docker-compose
-	`
+	```sh
+	curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+	chmod +x /usr/local/bin/docker-compose
+	```
 
 ## Deployment
 
-`git clone https://github.com/Evilcome/bootstrap-files.git`
-`cd bootstrap-files`
-`docker-compose up`
+```sh
+git clone https://github.com/Evilcome/bootstrap-files.git
+```
+```sh
+cd bootstrap-files
+```
+```sh
+docker-compose up
+```
