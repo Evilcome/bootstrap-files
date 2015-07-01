@@ -11,16 +11,16 @@ RUN apt-get update && \
 # Install nodemon
 RUN npm install -g nodemon
 
-# Try to remove the repo if it already exists
+# Clone the swift-how project
 RUN rm -rf <git repo name>; true
-RUN git clone <remote git repo>
-RUN cd <git repo name> && npm install
+RUN git clone https://github.com/Evilcome/swift-how-site.git
+RUN cd /swift-how-site && npm install
 
 # Define working directory
-WORKDIR <git repo name>
+WORKDIR /swift-how-site
 
 # Expose port
 EXPOSE  8003
 
 # Run app using nodemon
-CMD ["nodemon", "<git repo name>/index.js"]
+CMD ["nodemon", "/swift-how-site/index.js"]
