@@ -12,7 +12,7 @@ RUN apt-get update && \
 RUN npm install -g nodemon
 
 # Clone the swift-how project
-RUN rm -rf <git repo name>; true
+RUN rm -rf swift-how-site
 RUN git clone https://github.com/Evilcome/swift-how-site.git
 RUN cd /swift-how-site && npm install
 
