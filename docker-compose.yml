@@ -20,6 +20,8 @@ blogswifthow:
     - "8004:2368"
 evilcomecom:
   build: ./evilcome-com
+  volumes:
+    - ./evilcome-com/test-app/:/app
   environment:
     - NODE_ENV=production
     - VIRTUAL_HOST=blog.evilcome.com

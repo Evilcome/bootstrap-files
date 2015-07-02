@@ -11,10 +11,6 @@ RUN apt-get update && \
 # Install nodemon
 RUN npm install -g nodemon
 
-RUN mkdir /app
-
-VOLUME /app ./test-app
-
 RUN cd /app && npm install
 
 # Define working directory
