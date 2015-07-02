@@ -11,12 +11,10 @@ RUN apt-get update && \
 # Install nodemon
 RUN npm install -g nodemon
 
-VOLUME ~/bootstrap-files/evilcome-com/test-app:/app
+VOLUME ~/bootstrap-files/evilcome-com/test-app:~/app
 
 # Define working directory
-WORKDIR /app
-
-RUN ll
+cd ~/app
 
 RUN npm install
 
