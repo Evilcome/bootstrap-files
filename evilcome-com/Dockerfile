@@ -13,10 +13,10 @@ RUN npm install -g nodemon
 
 VOLUME ~/bootstrap-files/evilcome-com/test-app:/app
 
-RUN cd /app && npm install
-
 # Define working directory
 WORKDIR /app
+
+RUN npm install
 
 # Expose port
 EXPOSE  8005
