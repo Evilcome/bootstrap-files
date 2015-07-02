@@ -11,13 +11,17 @@ RUN apt-get update && \
 # Install nodemon
 RUN npm install -g nodemon
 
-# Define working directory
-WORKDIR /test-app
+RUN mkdir /app
 
-RUN npm install
+VOLUME /app ./test-app
+
+RUN cd /app && npm install
+
+# Define working directory
+WORKDIR /app
 
 # Expose port
 EXPOSE  8005
 
 # Run app using nodemon
-CMD ["nodemon", "index.js"]
+CMD ["nodemon", "/app/index.js"]
