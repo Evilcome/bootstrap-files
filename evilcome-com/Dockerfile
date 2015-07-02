@@ -14,7 +14,7 @@ RUN npm install -g nodemon
 VOLUME ~/bootstrap-files/evilcome-com/test-app:~/app
 
 # Define working directory
-cd ~/app
+RUN cd ~/app
 
 RUN npm install
 
