@@ -16,6 +16,8 @@ VOLUME ~/bootstrap-files/evilcome-com/test-app:/app
 # Define working directory
 WORKDIR /app
 
+RUN ll
+
 RUN npm install
 
 # Expose port
