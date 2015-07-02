@@ -11,7 +11,7 @@ RUN apt-get update && \
 # Install nodemon
 RUN npm install -g nodemon
 
-COPY ./test-app /app
+FROM ./test-app VOLUME /app
 
 RUN cd /app && npm install
 
