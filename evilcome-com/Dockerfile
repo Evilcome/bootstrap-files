@@ -11,7 +11,7 @@ RUN apt-get update && \
 # Install nodemon
 RUN npm install -g nodemon
 
-FROM ./test-app VOLUME /app
+VOLUME ~/bootstrap-files/evilcome-com/test-app:/app
 
 RUN cd /app && npm install
 
