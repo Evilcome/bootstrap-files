@@ -19,7 +19,11 @@ blogswifthow:
   ports:
     - "8004:2368"
 evilcomecom:
-  build: ./evilcome-com
+  image: node
+  working_dir: /node/src/simple-app
+  command: node run index.js
+  volumes:
+    - ./evilcome-com/test-app:/node/src/simple-app
   environment:
     - NODE_ENV=production
     - VIRTUAL_HOST=blog.evilcome.com
