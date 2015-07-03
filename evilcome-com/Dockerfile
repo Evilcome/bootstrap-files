@@ -1,25 +1,14 @@
-FROM ubuntu
+FROM node
 
 MAINTAINER Evilcome
 
-# Install Node.js and other dependencies
-RUN apt-get update && \
-    apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
-    apt-get -y install python build-essential nodejs
+RUN mkdir /src
 
-# Install nodemon
-RUN npm install -g nodemon
-
-VOLUME ~/bootstrap-files/evilcome-com/test-app:~/app
-
-# Define working directory
-RUN cd ~/app
-
+WORKDIR /src
+ADD evilcome-com/test-app/package.json /src/package.json
 RUN npm install
 
 # Expose port
 EXPOSE  8005
 
-# Run app using nodemon
-CMD ["nodemon", "/app/index.js"]
+CMD node evilcome-com/test-app/index.js
