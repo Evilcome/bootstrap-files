@@ -5,7 +5,7 @@ var express = require('express'),
 var app = express();
 
 app.get('/', function(req, res, next) {
-  mongoose.connect('mongodb://localhost/' + process.env.MONGO_NAME);
+  // mongoose.connect('mongodb://localhost/' + process.env.MONGO_NAME);
   res.json(process.env);
 });
 
