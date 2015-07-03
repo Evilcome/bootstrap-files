@@ -21,7 +21,6 @@ blogswifthow:
 evilcomecom:
   image: node
   working_dir: /node/src/simple-app
-  command: node index.js
   volumes:
     - ./evilcome-com/test-app:/node/src/simple-app
   environment:
