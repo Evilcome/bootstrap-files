@@ -6,6 +6,8 @@ nginx:
     - "80:80"
 swifthow:
   build: ./swift-how
+  volumes:
+    - "swift-how/app:/src/app"
   environment:
     - VIRTUAL_HOST=swift.how,evilcome.com
     - VIRTUAL_PORT=8003
