@@ -5,7 +5,7 @@ var app = express();
 app.use(express.static(__dirname + '/images'));
 
 app.get('/', function(req, res, next) {
-  res.send('<html><head></head><body style="text-align:center"><img src="holdon.png" /></body></html>');
+  res.send('<html><head><meta name="google-site-verification" content="vDwa_b-qeg9fR2mVy2I55uI5xGh_1gGm06nezZOXgsQ" /></head><body style="text-align:center"><img src="holdon.png" /></body></html>');
 });
 
 http.createServer(app).listen(process.env.PORT || 8003, function() {
