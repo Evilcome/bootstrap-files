@@ -5,7 +5,7 @@ MAINTAINER Evilcome
 RUN mkdir /src
 
 WORKDIR /src
-ADD swift-how/app/package.json /src/package.json
+ADD app/package.json /src/package.json
 RUN npm install
 
 # Expose port
