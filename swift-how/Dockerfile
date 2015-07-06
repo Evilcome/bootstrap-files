@@ -11,4 +11,4 @@ RUN npm install
 # Expose port
 EXPOSE  8003
 
-CMD node swift-how/app/index.js
+CMD node app/index.js
