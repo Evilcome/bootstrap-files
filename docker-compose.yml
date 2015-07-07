@@ -2,8 +2,10 @@ nginx:
   image: jwilder/nginx-proxy
   volumes:
     - /var/run/docker.sock:/tmp/docker.sock
+    - /root/certs:/etc/nginx/certs
   ports:
     - "80:80"
+    - "443:443"
 swifthow:
   build: ./swift-how
   volumes:
@@ -11,6 +13,7 @@ swifthow:
   environment:
     - VIRTUAL_HOST=swift.how,evilcome.com
     - VIRTUAL_PORT=8003
+    - VIRTUAL_PROTO=https
   ports:
     - "8003:8003"
 blogswifthow:
