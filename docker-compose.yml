@@ -10,10 +10,13 @@ swifthow:
   build: ./swift-how
   volumes:
     - "swift-how/app:/src/app"
+    - /var/nginx/certs:/var/nginx/certs
   environment:
     - VIRTUAL_HOST=swift.how
     - VIRTUAL_PORT=8003
     - VIRTUAL_PROTO=https
+    - SSL_KEY_PATH=/var/nginx/certs/swift.how.key
+    - SSL_CRT_PATH=/var/nginx/certs/swift.how.crt
   ports:
     - "8003:8003"
 blogswifthow:
