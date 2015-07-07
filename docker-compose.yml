@@ -13,7 +13,6 @@ swifthow:
   environment:
     - VIRTUAL_HOST=swift.how
     - VIRTUAL_PORT=8003
-    - VIRTUAL_PROTO=https
   ports:
     - "8003:8003"
 blogswifthow:
