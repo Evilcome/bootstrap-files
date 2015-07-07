@@ -11,7 +11,7 @@ swifthow:
   volumes:
     - "swift-how/app:/src/app"
   environment:
-    - VIRTUAL_HOST=swift.how,evilcome.com
+    - VIRTUAL_HOST=swift.how
     - VIRTUAL_PORT=8003
     - VIRTUAL_PROTO=https
   ports:
