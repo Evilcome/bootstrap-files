@@ -12,5 +12,5 @@ blog:
   environment:
     - VIRTUAL_HOST=blog.swift.how
     - VIRTUAL_PORT=8004
-  port:
+  ports:
     - "8004:2368"
