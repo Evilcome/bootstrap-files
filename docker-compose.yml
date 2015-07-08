@@ -7,3 +7,10 @@ swifthow:
     - VIRTUAL_PORT=8003
   ports:
     - "8003:8003"
+blog:
+  image: ghost
+  environment:
+    - VIRTUAL_HOST=blog.swift.how
+    - VIRTUAL_PORT=8004
+  port:
+    - "8004:2368"
