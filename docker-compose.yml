@@ -5,28 +5,5 @@ swifthow:
   environment:
     - VIRTUAL_HOST=swift.how
     - VIRTUAL_PORT=8003
-    - CERT_NAME=swift.how
   ports:
     - "8003:8003"
-blogswifthow:
-  image: ghost
-  environment:
-    - VIRTUAL_HOST=blog.swift.how
-    - VIRTUAL_PORT=8004
-    - CERT_NAME=swift.how
-  ports:
-    - "8004:2368"
-evilcomecom:
-  build: ./evilcome-com
-  volumes:
-    - "evilcome-com/test-app:/src/app"
-  environment:
-    - NODE_ENV=production
-    - VIRTUAL_HOST=blog.evilcome.com
-    - VIRTUAL_PORT=8005
-  ports:
-    - "8005:8005"
-  links:
-    - mongo
-mongo:
-  image: mongo
