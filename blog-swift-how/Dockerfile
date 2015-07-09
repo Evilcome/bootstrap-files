@@ -6,6 +6,8 @@ VOLUME mesimers:/src/app
 
 WORKDIR /src/app
 
+ADD mesimers/package /src/app
+
 RUN npm install --production
 
 # Expose port
