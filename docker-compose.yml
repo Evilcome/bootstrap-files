@@ -1,5 +1,7 @@
 blogswifthow:
   build: ./blog-swift-how
+  volumes:
+    - blog-swift-how/mesimers:src/app
   environment:
     - VIRTUAL_HOST=blog.swift.how
     - VIRTUAL_PORT=8001
@@ -8,7 +10,7 @@ blogswifthow:
 swifthow:
   build: ./swift-how
   volumes:
-    - "swift-how/app:/src/app"
+    - swift-how/app:/src/app
   environment:
     - VIRTUAL_HOST=swift.how,www.swift.how
     - VIRTUAL_PORT=8003
