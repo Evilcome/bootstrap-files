@@ -4,9 +4,11 @@ MAINTAINER Evilcome
 
 RUN mkdir /src
 
-WORKDIR /src/app
+WORKDIR /src
 
 ADD mesimers/package.json /src/app
+
+WORKDIR /src/app
 
 RUN npm install --production
 
