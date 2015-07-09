@@ -11,6 +11,6 @@ ADD mesimers/package.json /src/package.json
 RUN npm install --production
 
 # Expose port
-EXPOSE  8001
+EXPOSE  8005
 
 CMD node mesimers/index.js
