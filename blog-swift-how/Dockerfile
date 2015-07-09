@@ -1,4 +1,4 @@
-FROM node
+FROM node:0.10-onbuild
 
 MAINTAINER Evilcome
 
@@ -13,4 +13,4 @@ RUN npm install --production
 # Expose port
 EXPOSE  8001
 
-CMD ["npm", "start", ""--production"]
+CMD node app/index.js
