@@ -5,8 +5,9 @@ blogswifthow:
   environment:
     - VIRTUAL_HOST=blog.swift.how
     - VIRTUAL_PORT=8001
+    - NODE_ENV=production
   ports:
-    - "8001:2368"
+    - "8001:8005"
 swifthow:
   build: ./swift-how
   volumes:
