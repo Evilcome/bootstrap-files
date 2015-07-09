@@ -2,13 +2,11 @@ FROM node
 
 MAINTAINER Evilcome
 
-RUN mkdir /src
-
-WORKDIR /src
-
-ADD mesimers/package.json /src/app
+RUN mkdir /src/app
 
 WORKDIR /src/app
+
+## ADD mesimers/package.json /src
 
 RUN npm install --production
 
