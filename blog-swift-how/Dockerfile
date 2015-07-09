@@ -2,7 +2,7 @@ FROM node
 
 MAINTAINER Evilcome
 
-RUN mkdir /src/app
+WORKDIR /src/app
 
 RUN npm install --production
 
