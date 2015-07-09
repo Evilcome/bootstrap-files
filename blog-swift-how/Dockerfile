@@ -2,7 +2,7 @@ FROM node
 
 MAINTAINER Evilcome
 
-VOLUME /root/projects/mesimers:/src/app
+VOLUME /projects/mesimers:/src/app
 
 WORKDIR /src/app
 
