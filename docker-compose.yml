@@ -4,10 +4,9 @@ blogswifthow:
     - blog-swift-how/mesimers:/src/app
   environment:
     - VIRTUAL_HOST=blog.swift.how
-    - VIRTUAL_PORT=8001
-    - NODE_ENV=production
+    - VIRTUAL_PORT=8004
   ports:
-    - "8001:2368"
+    - "8004:2368"
 swifthow:
   build: ./swift-how
   volumes:
