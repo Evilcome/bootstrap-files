@@ -6,7 +6,7 @@ RUN mkdir /src
 
 WORKDIR /src
 
-ADD mesimers/package.json /src
+ADD mesimers/package.json /src/package.json
 
 RUN npm install --production
 
