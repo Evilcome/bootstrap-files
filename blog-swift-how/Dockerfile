@@ -13,4 +13,4 @@ RUN npm install --production
 # Expose port
 EXPOSE  8001
 
-CMD node app/index.js
+CMD node mesimers/index.js
