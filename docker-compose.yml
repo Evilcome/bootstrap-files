@@ -1,3 +1,12 @@
+blogswifthow:
+  build: ./blog-swift-how
+  volumes:
+    - /root/projects/mesimers:/src/app
+  environment:
+    - VIRTUAL_HOST=blog.swift.how
+    - VIRTUAL_PORT=8001
+  ports:
+    - "8001:2368"
 swifthow:
   build: ./swift-how
   volumes:
@@ -7,10 +16,11 @@ swifthow:
     - VIRTUAL_PORT=8003
   ports:
     - "8003:8003"
-blog:
-  image: ghost
-  environment:
-    - VIRTUAL_HOST=blog.swift.how
-    - VIRTUAL_PORT=8004
-  ports:
-    - "8004:2368"
+
+# blog:
+#   image: ghost
+#   environment:
+#     - VIRTUAL_HOST=blog.swift.how
+#     - VIRTUAL_PORT=8004
+#   ports:
+#     - "8004:2368"
