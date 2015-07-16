@@ -7,16 +7,16 @@ swifthow:
     - VIRTUAL_PORT=8003
   ports:
     - "8003:8003"
-blogswifthow:
-  build: ./blog-swift-how
+blog:
+  build: ./blog
   volumes:
     # blog content (post db)
-    - blog-swift-how/content/data:/usr/src/app/content/data
+    - blog/content/data:/usr/src/app/content/data
     # blog images
-    - blog-swift-how/content/images:/usr/src/app/content/images
+    - blog/content/images:/usr/src/app/content/images
   environment:
     - VIRTUAL_HOST=blog.swift.how
-    - VIRTUAL_PORT=8005
+    - VIRTUAL_PORT=8001
     - NODE_ENV=production
   ports:
-    - "8005:8005"
+    - "8001:8001"
