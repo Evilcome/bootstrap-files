@@ -11,8 +11,6 @@ swifthow:
     - VIRTUAL_PORT=8003
   ports:
     - "8003:8003"
-  links:
-    - mongodb:mongo
 blog:
   build: ./blog
   volumes:
