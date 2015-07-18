@@ -8,7 +8,7 @@ swifthow:
   ports:
     - "8003:8003"
   external_links:
-    - mymongo/mongo
+    - mymongo:mongo
 blog:
   build: ./blog
   volumes:
