@@ -1,12 +1,16 @@
 var express = require('express'),
     http = require('http'),
+    mongoose = require('mongoose'),
     fs = require('fs');
 
 var app = express();
 app.use(express.static(__dirname + '/images'));
 
-// var privateKey = fs.readFileSync(process.env.SSL_KEY_PATH);
-// var certificate = fs.readFileSync(process.env.SSL_CRT_PATH);
+mongoose.connect('mongodb://0.0.0.0:27017/test_database', function(err, a) {
+  console.log("~~~~~~~~~~~~~~~~~~");
+  console.log(err);
+  console.log(a);
+});
 
 app.get('/', function(req, res, next) {
   res.send('<html><head></head><body style="text-align:center"><img src="holdon.png" /></body></html>');
