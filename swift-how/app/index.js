@@ -5,8 +5,8 @@ var express = require('express'),
 
 var app = express();
 app.use(express.static(__dirname + '/images'));
-
-mongoose.connect('mongodb://localhost/test_database', function(err, a) {
+var mongoPath = process.env.MONGO_PORT_27017_TCP_ADDR + ":" + process.env.MONGO_PORT_27017_TCP_PORT;
+mongoose.connect('mongodb://' + mongoPath + '/test_database', function(err, a) {
   console.log("~~~~~~~~~~~~~~~~~~");
   console.log(err);
   console.log(a);
