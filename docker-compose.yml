@@ -1,3 +1,7 @@
+mongodb:
+  image: mongo:latest
+  volumes:
+    - /root/my/own/mongodb:/data/db
 swifthow:
   build: ./swift-how
   volumes:
@@ -8,7 +12,7 @@ swifthow:
   ports:
     - "8003:8003"
   links:
-    - some-mongo:mongo
+    - mongodb:mongo
 blog:
   build: ./blog
   volumes:
