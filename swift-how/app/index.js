@@ -6,7 +6,7 @@ var express = require('express'),
 var app = express();
 app.use(express.static(__dirname + '/images'));
 
-mongoose.connect('mongodb://0.0.0.0:27017/test_database', function(err, a) {
+mongoose.connect('mongodb://localhost/test_database', function(err, a) {
   console.log("~~~~~~~~~~~~~~~~~~");
   console.log(err);
   console.log(a);
