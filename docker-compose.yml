@@ -1,24 +1,37 @@
 swifthow:
-  build: ./swift-how
-  volumes:
-    - swift-how/app:/src/app
-  environment:
-    - VIRTUAL_HOST=swift.how,www.swift.how
-    - VIRTUAL_PORT=8003
-  ports:
-    - "8003:8003"
-  external_links:
-    - mymongo:mongo
+    build: ./swift-how
+    volumes:
+        - swift-how/app:/src/app
+    environment:
+        - VIRTUAL_HOST=swift.how,www.swift.how
+        - VIRTUAL_PORT=8003
+    ports:
+        - "8003:8003"
+    external_links:
+        - mymongo:mongo
 blog:
-  build: ./blog
-  volumes:
-    # blog content (post db)
-    - blog/content/data:/usr/src/app/content/data
-    # blog images
-    - blog/content/images:/usr/src/app/content/images
-  environment:
-    - VIRTUAL_HOST=blog.swift.how
-    - VIRTUAL_PORT=8001
-    - NODE_ENV=production
-  ports:
-    - "8001:8001"
+    build: ./blog
+    volumes:
+        # blog content (post db)
+        - blog/content/data:/usr/src/app/content/data
+        # blog images
+        - blog/content/images:/usr/src/app/content/images
+    environment:
+        - VIRTUAL_HOST=blog.swift.how
+        - VIRTUAL_PORT=8001
+        - NODE_ENV=production
+    ports:
+        - "8001:8001"
+site:
+    build: ./site
+    environment:
+        - VIRTUAL_HOST=swift.how,www.swift.how
+        - VIRTUAL_PORT=8002
+        - NODE_ENV=production
+        - PORT=8002
+        - IP=0.0.0.0
+        - MONGO_DB_NAME=swift-how
+    ports:
+        - "8002:8002"
+    external_links:
+        - mymongo:mongo
