@@ -1,14 +1,3 @@
-swifthow:
-    build: ./swift-how
-    volumes:
-        - swift-how/app:/src/app
-    environment:
-        - VIRTUAL_HOST=swift.how,www.swift.how
-        - VIRTUAL_PORT=8003
-    ports:
-        - "8003:8003"
-    external_links:
-        - mymongo:mongo
 blog:
     build: ./blog
     volumes:
