@@ -1,4 +1,5 @@
 blog:
+    restart: always
     build: ./blog
     volumes:
         # blog content (post db)
@@ -12,6 +13,7 @@ blog:
     ports:
         - "8001:8001"
 site:
+    restart: always
     build: ./site
     environment:
         - VIRTUAL_HOST=swift.how,www.swift.how
