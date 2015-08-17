@@ -7,7 +7,7 @@ blog:
         # blog images
         - blog/content/images:/usr/src/app/content/images
     environment:
-        - VIRTUAL_HOST=swift.how,www.swift.how
+        - VIRTUAL_HOST=swift.how,www.swift.how,blog.swift.how
         - VIRTUAL_PORT=8001
         - NODE_ENV=production
     ports:
