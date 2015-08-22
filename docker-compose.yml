@@ -26,3 +26,13 @@ site:
         - "8002:8002"
     external_links:
         - mymongo:mongo
+comingsoon:
+    restart: always
+    build: ./coming-soon
+    volumes:
+      - coming-soon/:/src/app
+    environment:
+      - VIRTUAL_HOST=swiftgame.org,www.swiftgame.org,game-china.org,www.game-china.org
+      - VIRTUAL_PORT=3000
+    ports:
+      - "3000:3000"
